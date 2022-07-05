@@ -15,7 +15,6 @@ public class FizzBuzz {
 //Space complexity is S = o(1)
 //Time complexity is T = o(n)
 
-
     public static Vector<String> fizzBuzz(int n){
        Vector<String> ans = new Vector<>();// this line is not calculating in space complexity
        for(int i=1; i <= n; i++){
