@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class RemoveAllAdjacentDuplicates {
     public static void main(String [] args){
-        String length = removeDuplicate("aabc");
+        String length = removeDuplicate("mississippi");
 
         System.out.println(length);
 
@@ -19,7 +19,7 @@ public class RemoveAllAdjacentDuplicates {
 //Time complexity is T = o(n)
 
     public static String removeDuplicate(String s){
-        String finalResult = "";
+
         Stack<Character> stack = new Stack<>();
         int n = s.length();
         for(int i =0; i<n; i++){
@@ -27,23 +27,18 @@ public class RemoveAllAdjacentDuplicates {
             if(stack.empty() || s.charAt(i) != stack.peek()){
                 stack.push(s.charAt(i));
             }
-         else {
-                stack.pop();
-            }
+             else {
+                    stack.pop();
+             }
         }
-        while(!stack.empty()){
-            Character a;
-            a  = stack.peek();
-            stack.pop();
-            finalResult = finalResult + a;
+        String finalResult = "";
+        for(Character item: stack){
+            finalResult = finalResult + item;
         }
         StringBuilder input1 = new StringBuilder();
 
         // append a string into StringBuilder input1
         input1.append(finalResult);
-
-
-        // finalResult = String.valueOf(stack.peek());
-       return input1.reverse().toString();
+        return input1.reverse().toString();
     }
 }
