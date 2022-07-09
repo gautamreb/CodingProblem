@@ -25,5 +25,4 @@ public class RecursionNumberOfDigits {
          int smallOutput = count(n/10); //  Recursive Case
         return smallOutput +1;
     }
-
 }
