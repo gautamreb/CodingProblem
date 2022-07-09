@@ -19,7 +19,7 @@ public class RecursionNumberOfDigits {
     // 3rd Step  Induction Step if 2nd case F(K+1) is true then Ek+1 = (k+1)(k+2)/2 is true
 
     // count(n) =  count(n/10)+ 1
-    //break number and call count
+    // break number and call count
     static int count(int n){
         if(n == 0) return 0 ; //  Base Case
          int smallOutput = count(n/10); //  Recursive Case
