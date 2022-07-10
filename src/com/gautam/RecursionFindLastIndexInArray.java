@@ -4,7 +4,7 @@ public class RecursionFindLastIndexInArray {
 
     public static void main(String args []){
         int [] input = {1,2,3,2,5};
-        int result =  lastIndex(input, 5, 2, 4);
+        int result =  lastIndex(input, 5, 2, 4);// array, length or array, element, i start from length-1
         System.out.println(result);
 
     }
