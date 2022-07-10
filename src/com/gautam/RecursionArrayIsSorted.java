@@ -29,7 +29,6 @@ public class RecursionArrayIsSorted {
 
     }
 
-
     static boolean isSorted2(int [] m, int n){
         if(n == 0 || n ==1) {return true ; }//  Base Case
         if(m[n-2] > m[n-1]){
