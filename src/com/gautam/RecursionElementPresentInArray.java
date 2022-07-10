@@ -5,7 +5,7 @@ public class RecursionElementPresentInArray {
     public static void main(String args []){
         int [] input = {1,2,3,4,5};
        // boolean result =  isPresent2(input, 5, 2);
-        boolean result =  isPresent3(input, 5, 2, 0);
+        boolean result =  isPresent3(input, 5, 0, 0);
         System.out.println(result);
 
     }
@@ -33,7 +33,7 @@ public class RecursionElementPresentInArray {
     static boolean isPresent3(int [] m, int n, int x, int i){
         if(i == n ) {return false ; }//  Base Case
         if(m[i] == x){return true;}
-        return   isPresent3(m, n-1, x, i+1); //  Recursive Case
+        return   isPresent3(m, n, x, i+1); //  Recursive Case
 
     }
 }
