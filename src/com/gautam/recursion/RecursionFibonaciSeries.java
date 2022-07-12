@@ -1,15 +1,15 @@
-package com.gautam;
+package com.gautam.recursion;
 
 import java.util.Scanner;
 
-public class RecursionPrintNumber {
+public class RecursionFibonaciSeries {
 
     public static void main(String args []){
         Scanner myNumber = new Scanner(System.in);
         System.out.println("Enter Number");
         int inputNumber = myNumber.nextInt();
-         print(inputNumber);
-        print2(inputNumber);
+        int result = fib(inputNumber);
+        System.out.println(result);
     }
 
     //According to PMI(Principle of Mathematical induction)
@@ -18,17 +18,12 @@ public class RecursionPrintNumber {
     // 2nd Step Induction Hypothesis Assume F(k ) is true where k in general k
     // 3rd Step  Induction Step if 2nd case F(K+1) is true then Ek+1 = (k+1)(k+2)/2 is true
 
-    // print(n) =  print(n-1)+n
-    static void print(int n){
-        if(n == 0) return; //  Base Case
-         print(n-1); //  Recursive Case  // 1 2 3 4 .....n-2
-        System.out.println(n); // 3rd Step Calculation
-    }
-   //print descending number
-    static void print2(int n){
-        if(n == 0) return; //  Base Case
-        System.out.println(n); // 3rd Step Calculation
-        print(n-1); //  Recursive Case n-1......2,1
-
+    // Fib(n) =  Fib(n-2)+Fib(n-1)
+    static int fib(int n){
+        if(n == 0) return 0; //  Base Case
+        if(n == 1) return 1; //  Base Case
+        int smallOutput1 = fib(n-1); //  Recursive Case
+        int smallOutput2 = fib(n-2); //  Recursive Case
+        return smallOutput1 + smallOutput2; // 3rd Step Calculation
     }
 }

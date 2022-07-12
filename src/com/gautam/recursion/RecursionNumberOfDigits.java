@@ -1,15 +1,15 @@
-package com.gautam;
+package com.gautam.recursion;
 
 import java.util.Scanner;
 
-public class RecursionReplaceCharOfString {
+public class RecursionNumberOfDigits {
 
     public static void main(String args []){
-        Scanner myString = new Scanner(System.in);
+        Scanner myNumber = new Scanner(System.in);
         System.out.println("Enter Number");
-        String inputNumber = myString.nextLine();
-         replaceChar(inputNumber.toCharArray());
-       // System.out.println(result);
+        int inputNumber = myNumber.nextInt();
+        int result =  count(inputNumber);
+        System.out.println(result);
     }
 
     // According to PMI(Principle of Mathematical induction)
@@ -20,11 +20,9 @@ public class RecursionReplaceCharOfString {
 
     // count(n) =  count(n/10)+ 1
     // break number and call count
-    static void replaceChar(char []  n){
-        if(n.length < 0 ) return ; //  Base Case
-        if(n[0] == 'a'){
-            n[0] = 'x';
-        }
-        replaceChar(n); //  Recursive Case
+    static int count(int n){
+        if(n == 0) return 0 ; //  Base Case
+         int smallOutput = count(n/10); //  Recursive Case
+        return smallOutput +1;
     }
 }

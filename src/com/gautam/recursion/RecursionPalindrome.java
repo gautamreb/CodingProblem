@@ -1,4 +1,4 @@
-package com.gautam;
+package com.gautam.recursion;
 
 public class RecursionPalindrome {
     public static void main(String [] args){

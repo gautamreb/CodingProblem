@@ -1,11 +1,11 @@
-package com.gautam;
+package com.gautam.recursion;
 
-public class RecursionCountOccurrenceOfElementInArray2 {
+public class RecursionCountOccurrenceOfElementInArray {
 
     public static void main(String args []){
         int [] input = {2,2,5,2,5};
 
-        int ans =  countOccurrence(input, 5, 2, 0);// array, length or array, element, i start from length-1
+        int ans =  countOccurrence(input, 5, 5, 0);// array, length or array, element, i start from length-1
         System.out.println(ans);
 
     }
@@ -21,7 +21,7 @@ public class RecursionCountOccurrenceOfElementInArray2 {
 
         if(i == n ) {return 0; }//  Base Case
         if(a[i] == x){ return 1+ countOccurrence(a, n,  x,i+1);}
-        else{ return 0+ countOccurrence(a, n,  x,i+1);}
+        return countOccurrence(a, n,  x,i+1);
 
     }
 }

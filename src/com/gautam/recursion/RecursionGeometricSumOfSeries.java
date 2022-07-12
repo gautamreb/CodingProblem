@@ -1,4 +1,4 @@
-package com.gautam;
+package com.gautam.recursion;
 
 import java.util.Scanner;
 
