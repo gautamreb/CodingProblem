@@ -10,6 +10,8 @@ public class RecursionTowerOfHanoi {
         int inputNumber = myString.nextInt();
         int result = towerOfHanoi(inputNumber);
         System.out.println(result);
+        printStepsOfTowerOfHanoi(inputNumber, 'A','C','B');
+
     }
 
     // According to PMI(Principle of Mathematical induction)
@@ -27,5 +29,14 @@ public class RecursionTowerOfHanoi {
         if(n == 0 ){return 0;}
         if(n < 0) {return 0;}
         return towerOfHanoi(n-1) + 1 + towerOfHanoi(n-1) ;
+    }
+    //print all the steps for Tower of Hanoi
+    static void printStepsOfTowerOfHanoi(int  n, char source, char dest, char helper){
+        if(n == 0 ){return ;}
+        //if(n < 0) {return ;}
+        printStepsOfTowerOfHanoi(n-1, source, helper, dest);
+        System.out.println("Moving disk "+ n + " from " + source + " to "+ dest);
+        printStepsOfTowerOfHanoi(n-1, helper, dest, source);
+
     }
 }
