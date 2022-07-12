@@ -21,6 +21,15 @@ public class SelectionSort {
 
     }
 
+   /* Time Complexity
+
+    Best: ?(n^2)
+    Average: ?(n^2)
+    Worst: O(n^2)
+    Space Complexity
+
+    O(1) */
+
     static void selectionSort(int[] a){
         for(int i =0; i< a.length -1;i++){
             int index= i;
