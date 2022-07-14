@@ -14,7 +14,7 @@ public class BubbleSort {
             array[i]=myArrayEle.nextInt();
         }
 
-        selectionSort(array);
+        bubbleSort(array);
         for(int i =0; i<array.length;i++){
             System.out.print(array[i]+" ");
         }
@@ -26,7 +26,7 @@ public class BubbleSort {
                            Worst: O(n^2)
     Space Complexity :  O(1) */
 
-    static void selectionSort(int[] a) {
+    static void bubbleSort(int[] a) {
         for (int i = 1; i < a.length; i++) {
             for (int j = 0; j < a.length -1; j++) {
                 if (a[j] > a[j + 1]) {
