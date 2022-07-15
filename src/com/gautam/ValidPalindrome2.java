@@ -2,7 +2,7 @@ package com.gautam;
 
 public class ValidPalindrome2 {
     public static void main(String [] args){
-        boolean result = validPalindrome("abcsbba");
+        boolean result = validPalindrome("never odd or even");
 
         System.out.println(result);
     }
