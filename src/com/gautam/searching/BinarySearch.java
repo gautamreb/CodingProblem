@@ -32,7 +32,7 @@ public class BinarySearch {
     static int binarySearch(int[] a, int length, int key) {
         int start =0; int end = length;
         while(start <= end){
-            int mid = (start+end)/2;
+            int mid = (start) +(end-start)/2; //use this for int overflow and under flow
             if(a[mid] == key){
                 return mid;
             }else if(a[mid] > key){end = mid-1;}
