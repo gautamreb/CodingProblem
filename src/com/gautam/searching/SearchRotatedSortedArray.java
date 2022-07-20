@@ -14,7 +14,7 @@ public class SearchRotatedSortedArray {
         System.out.println(pos);
 
     }
-
+    /*Binary searc*/
    /* Time Complexity :    o(log n)  space Complexity : O(1)*/
 
     static int search(Vector<Integer> input, int key) {
