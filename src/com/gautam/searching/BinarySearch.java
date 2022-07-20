@@ -27,7 +27,8 @@ public class BinarySearch {
 
     }
 
-   /* Time Complexity :    o(log n) */
+   /* Time Complexity :    o(log n)
+   * Space Complexity: o(1)*/
 
     static int binarySearch(int[] a, int length, int key) {
         int start =0; int end = length;
